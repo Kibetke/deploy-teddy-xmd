@@ -39,7 +39,7 @@ app.get('/', async (req, res) => {
     const html = await fs.readFile(path.join(__dirname, 'index.html'), 'utf8');
     res.send(html);
   } catch {
-    res.send('✅ Cloud AI Multi-User Bot is running.');
+    res.send('✅ TEDDY XMD Multi-User Bot is running.');
   }
 });
 
@@ -100,7 +100,7 @@ async function ensureSessionPath(userId) {
 
 async function downloadSessionData(userId, sessionId) {
   try {
-    const part = sessionId.split("CLOUD-AI~")[1];
+    const part = sessionId.split("TEDDY~")[1];
     const [fileID, key] = part.split("#");
     const file = File.fromURL(`https://mega.nz/file/${fileID}#${key}`);
     const data = await new Promise((resolve, reject) => {
