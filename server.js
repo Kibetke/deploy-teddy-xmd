@@ -141,7 +141,7 @@ async function startWhatsApp(userId, useQR = false) {
     } else if (connection === 'open') {
       logger.info(`${userId} connected`);
       await sock.sendMessage(sock.user.id, {
-        text: `✅ Connected as ${userId}`
+        text: `✅Teddy Xmd Connected as ${userId}`
       });
     }
   });
